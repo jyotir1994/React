@@ -1,12 +1,11 @@
 import React from 'react';
 import './App.css';
-import LifecycleA from './components/LifecycleA';
-import ParentComp from './components/ParentComp';
+import RefsDemo from './components/RefsDemo';
 
 function App() {
   return (
     <div className="App">
-      <ParentComp />
+      <RefsDemo />
     </div>
   );
 }
