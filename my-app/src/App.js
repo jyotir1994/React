@@ -1,13 +1,20 @@
 import React from 'react';
 import './App.css';
-import ClickCounter from './components/ClickCounter';
-import HoverCounter from './components/HoverCounter';
+import CounterTwo from './components/CounterTwo';
+import ClickCounterTwo from './components/ClickCounterTwo';
+import HoverCounterTwo from './components/HoverCounterTwo';
 
 function App() {
   return (
     <div className="App">
-      <ClickCounter />
-      <HoverCounter />
+      <CounterTwo
+        render={(count, incrementCount) =>
+          <ClickCounterTwo count={count} incrementCount={incrementCount} />}
+      />
+      <CounterTwo
+        render={(count, incrementCount) =>
+          <HoverCounterTwo count={count} incrementCount={incrementCount} />}
+      />
     </div>
   );
 }
