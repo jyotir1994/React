@@ -1,20 +1,14 @@
 import React from 'react';
 import './App.css';
-import CounterTwo from './components/CounterTwo';
-import ClickCounterTwo from './components/ClickCounterTwo';
-import HoverCounterTwo from './components/HoverCounterTwo';
+import ComponentC from './components/ComponentC';
+import { UserProvider } from './components/userContext'
 
 function App() {
   return (
     <div className="App">
-      <CounterTwo
-        render={(count, incrementCount) =>
-          <ClickCounterTwo count={count} incrementCount={incrementCount} />}
-      />
-      <CounterTwo
-        render={(count, incrementCount) =>
-          <HoverCounterTwo count={count} incrementCount={incrementCount} />}
-      />
+      <UserProvider value="ABC">
+        <ComponentC />
+      </UserProvider>
     </div>
   );
 }
